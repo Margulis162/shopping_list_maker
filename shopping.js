@@ -23,6 +23,8 @@ const item_name = document.getElementById("item");
 const price = document.getElementById("price");
 const datalist = document.getElementById("cat_list");
 
+const catOfItem = document.getElementById("category");
+
 // button for adding items in the list
 add_btn = document.getElementById("add_item");
 
@@ -50,10 +52,15 @@ function cat_data_creation(){
 
 // creates an item object and places it into the list
 function create_item(){
-   const item = new Item(item_name.value, price.value, datalist.value);
-   console.log(item);
-   cart.push(item);
-   updateList();
+    if(item_name.value !==""  && price.value !== "" && catOfItem.value !== ""){
+        const item = new Item(item_name.value, price.value, catOfItem.value);
+        console.log(item);
+        cart.push(item);
+        updateList();
+    }else{
+        alert('input missing')
+        console.log(catOfItem.value, item_name.value, price.value );
+    }
 }
  
 /*___________________________flow___________________________*/

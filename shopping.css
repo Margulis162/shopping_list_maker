@@ -31,7 +31,7 @@
 #lst_row{
     background-color: pink;
     block-size:100%;
-    padding-left:30px;
+    padding-inline:30px;
 }
 
 #price{
