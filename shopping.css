@@ -32,6 +32,7 @@
     background-color: pink;
     block-size:100%;
     padding-inline:30px;
+    overflow-y: scroll;
 }
 
 #price{
@@ -40,4 +41,21 @@
 
 hr{
     margin-block-start: 10px;
+}
+
+@media (max-width:600px){
+    #top-row{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: flex-start;
+        min-block-size: 175px;
+        padding-block:15px;
+        inline-size: 100%;
+
+    }
+
+    #lst_row{
+        inline-size:100%;
+    }
 }
