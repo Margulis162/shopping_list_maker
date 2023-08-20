@@ -26,6 +26,7 @@
     padding-block-start: 10px;
     padding-inline:20px;
     color:white;
+    border-block-end:1px solid rgba(112, 56, 49, 0.3);
 }
 
 #lst_row{
@@ -35,13 +36,15 @@
     overflow-y: scroll;
 }
 
+#bottom{
+    background-color: rgb(156, 94, 87);
+    block-size: 75px;
+}
 #price{
     max-width: 50px;
 }
 
-hr{
-    margin-block-start: 10px;
-}
+
 
 @media (max-width:600px){
     #top-row{
@@ -56,6 +59,10 @@ hr{
     }
 
     #lst_row{
+        inline-size:100%;
+    }
+
+    #bottom{
         inline-size:100%;
     }
 }
