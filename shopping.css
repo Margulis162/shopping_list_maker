@@ -11,4 +11,29 @@
     font-size:16px;
     background-image: linear-gradient( to bottom, salmon, pink );
     block-size:100vh;
+    display:flex;
+    flex-direction:column;
+}
+.row{
+    min-inline-size: 60%;
+    margin-inline:auto;
+    
+}
+
+#top-row{
+    background-image: linear-gradient(to bottom, rgb(112, 56, 49), rgb(234, 106, 123));
+    min-block-size: 70px;
+    padding-block-start: 10px;
+    padding-inline:20px;
+    color:white;
+}
+
+#lst_row{
+    background-color: pink;
+    block-size:100%;
+    padding-left:30px;
+}
+
+#price{
+    max-width: 50px;
 }

@@ -18,33 +18,35 @@
            
 
               
-                    
-                      
-                            <label class="sr-only" for="item">Item</label>
+                    <div class="row" id="top-row">
 
-                            <input type="text" " id="item" placeholder="Item">
-                     
-                         
+                        
+                        <label class="sr-only" for="item">Item</label>
+
+                        <input type="text" " id="item" placeholder="Item">
+                        
+                        
                               <input type="number"  id="price" placeholder="$">
-                         
-                    
-                                <input type="text"  id="category" placeholder="category" list="cat_list">
-                                <datalist id="cat_list">
-
-                                </datalist>
-                         
+                              
+                              
+                              <input type="text"  id="category" placeholder="category" list="cat_list">
+                              <datalist id="cat_list">
+                                  
+                            </datalist>
+                            
                             <button type="item_submit" id="add_item">Submit</button>
                        
                      
-              
-                    
-            <div class="row">
-                <ol class="list col-6-md offset-3" id="list"></ol>
-            </div>
-        </div>
-        
-        
-        <script src="shopping.js" async defer></script>
-      
-    </body>
+                            
+                            
+                        </div>
+                        <div class="row" id="lst_row">
+                            <ol  id="list"></ol>
+                        </div>
+                        </div>
+                        
+                        
+                        <script src="shopping.js" async defer></script>
+                        
+                    </body>
 </html>
