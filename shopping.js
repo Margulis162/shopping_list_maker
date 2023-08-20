@@ -26,18 +26,27 @@ const datalist = document.getElementById("cat_list");
 const catOfItem = document.getElementById("category");
 
 // button for adding items in the list
-add_btn = document.getElementById("add_item");
+const add_btn = document.getElementById("add_item");
+
+// ref to total 
+const total = document.getElementById("total");
+
+
 
 /*___________________________f(x)___________________________*/
 
 // updates the shopping list 
 function updateList(){
     list.innerHTML = "";
+    let total_price = 0;
     for( i of cart){
+        
         const position = list.appendChild(document.createElement('li'));
         position.textContent = `${i.name}______${i.price}$`;
+        total_price += i.price;
+        console.log(total_price);
     }
-
+    total.textContent = `Estimated total is ${total_price}`;
 }
 
 // creates a list of already recorded categories
@@ -53,7 +62,7 @@ function cat_data_creation(){
 // creates an item object and places it into the list
 function create_item(){
     if(item_name.value !==""  && price.value !== "" && catOfItem.value !== ""){
-        const item = new Item(item_name.value, price.value, catOfItem.value);
+        const item = new Item(item_name.value, Number(price.value), catOfItem.value);
         console.log(item);
         cart.push(item);
         updateList();
