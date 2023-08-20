@@ -18,7 +18,7 @@ class Item {
     }
 }
 
-const category_list =["vegitables", "dairy", "cosmetics", "meat & fish", "snacks"];
+const category_list =["vegetables", "dairy", "cosmetics", "meat & fish", "snacks"];
 const item_name = document.getElementById("item");
 const price = document.getElementById("price");
 const datalist = document.getElementById("cat_list");

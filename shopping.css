@@ -37,3 +37,7 @@
 #price{
     max-width: 50px;
 }
+
+hr{
+    margin-block-start: 10px;
+}
