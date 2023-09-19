@@ -14,9 +14,14 @@ body{
 h2{
    color:rgb(83, 83, 83);
 }
+
+ul{
+    list-style:none;
+}
 /* classes */
 .container{
     min-inline-size: 375px;
+    inline-size:800px;
     max-inline-size: 900px;
     margin-inline:auto;
     display: flex;
@@ -40,9 +45,6 @@ h2{
  
 }
 
-.lst{
-    margin-block-start: 40px;
-}
 
 /* id  */
 /* input */
@@ -59,11 +61,14 @@ h2{
     background-color: grey;
     padding-inline: 5px;
     color:white;
-
+    
 }
 
 
 /* more specific selectors */
+.lst li{
+    padding-block: 8px;;
+}
 
 #new_position:focus{
     outline:none;
