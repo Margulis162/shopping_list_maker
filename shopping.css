@@ -9,6 +9,7 @@
 body{
     background-color:blanchedalmond;
     display:flex;
+    block-size:100vh;
 }
 
 h2{
@@ -26,7 +27,7 @@ ul{
     margin-inline:auto;
     display: flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
 
 }
 
@@ -67,9 +68,41 @@ ul{
 
 /* more specific selectors */
 .lst li{
-    padding-block: 8px;;
+    padding-block: 8px;
+    user-select:none;
+    background: #f7f5f5;
+    transition: 0.2s;
+    position:relative;
+    padding-inline-start:30px;
 }
 
 #new_position:focus{
     outline:none;
+}
+
+.lst li:nth-child(odd){
+    background: #d8d6d6;
+}
+
+.lst li:hover{
+    background: #f8d563;
+}
+
+.lst li.checked{
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.lst li.checked::before{
+    content: "\2713";
+    color:rgb(118, 182, 23);
+    font-size: 1.8em;
+   margin-inline: 5px;
+   margin-block:auto;
+
+   /* properties below are needed to get around the fact that the pseudo elements inherit text-decoration form it's parent */
+   position:absolute;
+   top:0px;
+   left:0px;
 }
