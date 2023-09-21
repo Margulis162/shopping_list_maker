@@ -46,6 +46,20 @@ ul{
  
 }
 
+.close {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:absolute;
+    right:0;
+    top: 0;
+    block-size:100%;
+    padding-inline: 8px;
+    
+    font-size: 1.5em;
+    
+}
+
 
 /* id  */
 /* input */
@@ -105,4 +119,9 @@ ul{
    position:absolute;
    top:0px;
    left:0px;
+}
+
+.close:hover{
+    background-color: #f44336;
+    color:white;
 }
