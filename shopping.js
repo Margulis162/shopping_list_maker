@@ -1,6 +1,8 @@
 /*_____________________variables & classes___________________*/
 let node_list =document.getElementsByTagName("li");
 
+let close_btns = document.getElementsByClassName("close");
+
 
 /*___________________________f(x)___________________________*/
 function close_btn(){
@@ -13,9 +15,17 @@ function close_btn(){
         node.appendChild(span);
     }
 }
+ 
 
  
 /*___________________________flow___________________________*/
 
 close_btn();
 
+for(const btn of close_btns){
+    btn.addEventListener("click", (e)=>{
+        let prnt = e.currentTarget.parentElement;
+        console.log(prnt);
+        prnt.style.display ="none";
+    })
+}
