@@ -3,6 +3,7 @@ let node_list =document.getElementsByTagName("li");
 
 let close_btns = document.getElementsByClassName("close");
 
+const shoping_list = document.querySelector("ul");
 
 /*___________________________f(x)___________________________*/
 function close_btn(){
@@ -29,3 +30,9 @@ for(const btn of close_btns){
         prnt.style.display ="none";
     })
 }
+
+shoping_list.addEventListener("click", (e) =>  {
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+}
+});
