@@ -5,6 +5,12 @@ let close_btns = document.getElementsByClassName("close");
 
 const shoping_list = document.querySelector("ul");
 
+const new_item = document.getElementById("new_position");
+
+
+
+const add_btn = document.getElementById("add");
+
 /*___________________________f(x)___________________________*/
 function close_btn(){
     for(const node of node_list){
@@ -36,3 +42,15 @@ shoping_list.addEventListener("click", (e) =>  {
         e.target.classList.toggle("checked");
 }
 });
+
+add_btn.addEventListener("click", () => {
+    
+    
+   
+    let n_item = document.createElement('li');
+     n_item.textContent = new_item.value;
+    if(new_item.value !== "") {
+    shoping_list.appendChild(n_item)
+   } else{window.alert('some txt must be entered')}
+    
+})
