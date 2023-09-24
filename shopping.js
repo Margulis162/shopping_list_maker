@@ -27,7 +27,7 @@ function close_btn(){
  
 /*___________________________flow___________________________*/
 
-close_btn();
+
 
 for(const btn of close_btns){
     btn.addEventListener("click", (e)=>{
@@ -50,7 +50,8 @@ add_btn.addEventListener("click", () => {
     let n_item = document.createElement('li');
      n_item.textContent = new_item.value;
     if(new_item.value !== "") {
-    shoping_list.appendChild(n_item)
+    shoping_list.appendChild(n_item);
+    new_item.value = "";
    } else{window.alert('some txt must be entered')}
-    
+   close_btn();
 })
