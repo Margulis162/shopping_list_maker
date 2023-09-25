@@ -45,15 +45,21 @@ add_btn.addEventListener("click", () => {
     
     
     let n_item = document.createElement('li');
+    // for close btn
+    let span = document.createElement("span");
+    let txt = document.createTextNode("\u00D7");
     n_item.textContent = new_item.value;
     if(new_item.value !== "") {
+        span.className = "close";
+        span.appendChild(txt);
+        n_item.appendChild(span);
         shoping_list.appendChild(n_item);
+
         new_item.value = "";
     } else{window.alert('some txt must be entered')}
     
-    // so the multiple list elements in close_btns appear because the function is being closed every time the add btn presses
-    // the question is why is it only working inside the event listener
-    close_btn();
+   
+
 })
 
 
