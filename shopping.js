@@ -1,6 +1,6 @@
 /*_____________________variables & classes___________________*/
 
-let node_list =document.getElementsByTagName("li");
+
 
 let close_btns = document.getElementsByClassName("close");
 
@@ -14,6 +14,7 @@ const add_btn = document.getElementById("add");
 
 /*___________________________f(x)___________________________*/
 
+
 function close_btn_fx(){
     for(const btn of close_btns){
         btn.addEventListener("click", (e)=>{
@@ -26,22 +27,7 @@ function close_btn_fx(){
 }
 
  
-
- 
-/*___________________________flow___________________________*/
-
-
-
-shoping_list.addEventListener("click", (e) =>  {
-    if(e.target.tagName === "LI"){
-        e.target.classList.toggle("checked");
-    }
-});
-
-add_btn.addEventListener("click", () => {
-    
-    
-    
+function add_position(){
     let n_item = document.createElement('li');
     // for close btn
     let span = document.createElement("span");
@@ -56,9 +42,26 @@ add_btn.addEventListener("click", () => {
         new_item.value = "";
      
     } else{window.alert('some txt must be entered')}
-    
-   
+}
 
+ 
+/*___________________________flow___________________________*/
+
+
+
+shoping_list.addEventListener("click", (e) =>  {
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+    }
+});
+
+add_btn.addEventListener("click", () => {
+    add_position();
 })
 
+new_item.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
 
+        add_position();
+    }
+})
