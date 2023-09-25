@@ -125,3 +125,10 @@ ul{
     background-color: #f44336;
     color:white;
 }
+
+/* media queties */
+@media print{
+    .hidden_on_print{
+        display:none;
+    }
+}
