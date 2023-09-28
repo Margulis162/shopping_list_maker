@@ -128,7 +128,7 @@ ul{
 }
 
 /* media queties */
-@media print{
+@media print{j
     .hidden_on_print{
         display:none;
     }
